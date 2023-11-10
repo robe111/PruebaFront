@@ -1,27 +1,38 @@
-# PruebaFrontMain
+# Prueba Front
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+Dado el siguiente diseño:
 
-## Development server
+1. Maquetar usando HTML5 y SCSS como preprocesador de CSS. El diseño ha de ser aproximado no se va a valorar si el margen mide 8px en lugar de 5px si no que exista el margen
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+2. La Validación del formulario será obligatorio que ambos inputs estén cumplimentados, uno será tipo email con validación email y otro password cuya validación será que al menos deberá de tener 5 caracteres. El reminder del formulario, será un switch de tipo booleano y opcional.
 
-## Code scaffolding
+3. El botón de aceptar siempre estará activo pero al pulsarlo la primera vez si el formulario está mal cumplimentado se mostraran los mensajes de error, en caso de estar correctamente cumplimentados con poner un console.log(‘OK’) será suficiente
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+4. Para los iconos usar la librería que viene en Ionic o cualesquiera, el objetivo no es el diseño del icono si no su correcta maquetación.
 
-## Build
+5. Realizar el diseño responsive  con el breakpoint en 960px.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+6. Se valorará positivamente la creatividad (por ejemplo añadir alguna animación)
 
-## Running unit tests
+7. Test unitarios, E2E y componentes. Se valorará el uso de test unitarios, E2E y componentes
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+8. Inicialización del proyecto. 
 
-## Running end-to-end tests
+    Bastará con inicializar un proyecto en blanco mediante el CLI de Ionic o el CLI de Angular dependiendo del puesto si es web o mobile.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+    Mobile:
 
-## Further help
+    ```ionic start test_app blank```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    Web:
+
+    ```ng new test_app```
+
+
+# Consideraciones adicionales
+Es importante que se haga hincapié en los siguientes puntos:
+
+* Crear un fork privado del proyecto.
+* Commit hechos sobre repositorio. No hacer un commit final. Debe ir subiendo según tenga los trabajos realizados. Ejemplo: proyecto inicial, implementación de controller, implementación de servicios, test unitarios, etc...
+* Test Unitarios, es importante que haya una correcta cobertura de tests.
+* Generar un nuevo readme inicial de repositorio.
