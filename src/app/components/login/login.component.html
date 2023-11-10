@@ -1,4 +1,34 @@
-<div id="loginContainer">
-  <img id="logoImg" src="..\assets\logo.jpg" />
-  <h3>Prueba técnica</h3>
+<div id="loginContainer" [ngClass]="{ background: !mobile }">
+  <div id="loginHeader" [ngClass]="{ background: !mobile }">
+    <div id="logoImgContainer">
+      <img id="logoImg" src="..\assets\logo.jpg" alt="Imagen del usuario" />
+    </div>
+    <div *ngIf="!mobile" id="userTitle">
+      <h3>{{ username }}</h3>
+    </div>
+  </div>
+  <div id="loginContent">
+    <input type="text" name="email" placeholder="Email" />
+    <input type="password" name="password" placeholder="Contraseña" />
+    <div id="rememberMeLbl">Recordar</div>
+
+    <div class="toggle-pill-bw">
+      <input
+        type="checkbox"
+        (change)="changeRememberMe()"
+        id="rememberMe"
+        name="check"
+      />
+      <label for="rememberMe"></label>
+    </div>
+  </div>
+  <div id="buttonContainer" [ngClass]="{ buttonContainerD: !mobile }">
+    <button
+      [ngClass]="{ pill: !mobile, 'plain-button': mobile }"
+      (click)="logIn()"
+    >
+      Acceder
+    </button>
+  </div>
 </div>
+<footer *ngIf="!mobile">Registrate</footer>
