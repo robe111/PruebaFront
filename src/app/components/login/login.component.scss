@@ -29,6 +29,7 @@
   padding: 10px;
   padding-right: 20px;
   background-color: white;
+  min-width: 400px;
 }
 
 #loginContainer h3 {
@@ -77,18 +78,39 @@
   cursor: pointer;
 }
 
-#loginContent input[type="text"],
+#loginContent input[type="email"],
 #loginContent input[type="password"] {
   font-size: 13px;
   padding: 5px;
   border: 0px;
+  margin-left: 30px;
+  width: 90%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#loginContent input[type="email"]:focus-visible,
+#loginContent input[type="password"]:focus-visible {
+  outline: none;
+}
+
+.textContainer {
   border-bottom: 1px solid #eeeeee;
-  width: 100%;
-  margin-bottom: 10px;
+  position: relative;
+}
+i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  opacity: 0.5;
 }
 
 #loginContent input::placeholder {
   opacity: 0.5;
+}
+
+#rememberRow {
+  margin-top: 25px;
 }
 
 footer {
@@ -114,7 +136,7 @@ footer {
   width: 3em;
   height: 1.6em;
   margin-bottom: 20px;
-  background: #50565a;
+  background: #50565a5c;
   border-radius: 1em;
   cursor: pointer;
   -webkit-transition: background 0.1s ease-in-out;
@@ -134,7 +156,7 @@ footer {
   transition: all 0.2s ease-in-out;
 }
 .toggle-pill-bw input[type="checkbox"]:checked + label {
-  background: #40464a;
+  background: #757f86;
 }
 .toggle-pill-bw input[type="checkbox"]:checked + label:before {
   left: 1.6em;

@@ -1,3 +1,4 @@
+<!-- <form  #loginForm="ngForm"  (ngSubmit)="logIn(loginForm)"> -->
 <div id="loginContainer" [ngClass]="{ background: !mobile }">
   <div id="loginHeader" [ngClass]="{ background: !mobile }">
     <div id="logoImgContainer">
@@ -8,18 +9,26 @@
     </div>
   </div>
   <div id="loginContent">
-    <input type="text" name="email" placeholder="Email" />
-    <input type="password" name="password" placeholder="Contraseña" />
-    <div id="rememberMeLbl">Recordar</div>
+    <div class="textContainer">
+      <i class="fas fa-search"></i>
+      <input type="email" name="email" placeholder="Email" />
+    </div>
+    <div class="textContainer">
+      <i class="fas fa-lock"></i>
+      <input type="password" name="password" placeholder="Contraseña" />
+    </div>
+    <div id="rememberRow">
+      <div id="rememberMeLbl">Recordar</div>
 
-    <div class="toggle-pill-bw">
-      <input
-        type="checkbox"
-        (change)="changeRememberMe()"
-        id="rememberMe"
-        name="check"
-      />
-      <label for="rememberMe"></label>
+      <div class="toggle-pill-bw">
+        <input
+          type="checkbox"
+          (change)="changeRememberMe()"
+          id="rememberMe"
+          name="check"
+        />
+        <label for="rememberMe"></label>
+      </div>
     </div>
   </div>
   <div id="buttonContainer" [ngClass]="{ buttonContainerD: !mobile }">
@@ -31,4 +40,5 @@
     </button>
   </div>
 </div>
+<!-- </form> -->
 <footer *ngIf="!mobile">Registrate</footer>

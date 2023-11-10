@@ -1,5 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgForm } from '@angular/forms';
+
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -19,12 +21,15 @@ export class LoginComponent {
     this.mobile = window.innerWidth <= 960;
   }
 
-  logIn() {
-    console.log('‘OK’');
-  }
-
   changeRememberMe() {
     this.rememberMe = !this.rememberMe;
     console.log('Remember me: ', this.rememberMe);
   }
+
+  logIn() {
+    console.log('‘OK’');
+  }
+  /*logIn(form: NgForm) {
+    console.log('‘OK’');
+  }*/
 }
