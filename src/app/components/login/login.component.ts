@@ -1,7 +1,9 @@
-import { Component, HostListener } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { LoginService } from '../../services/login.service';
+import { CommonModule } from '@angular/common';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-login',
@@ -10,13 +12,22 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   title: string = 'Login';
   username: string = 'Prueba técnica';
   user: any;
-
   mobile: boolean = false;
   rememberMe: boolean = false;
+  error: boolean = false;
+
+  constructor(
+    public loginService: LoginService,
+    private formsModule: FormsModule
+  ) {}
+
+  ngOnInit() {
+    this.user = new User();
+  }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any): void {
@@ -29,21 +40,29 @@ export class LoginComponent {
   }
 
   logIn(form: NgForm) {
-    this.validateParams(form);
+    this.user = { ...form.value };
+    console.log(this.user);
+    this.validateParams();
   }
 
-  validateParams(form: NgForm) {
+  validateParams() {
     if (
-      this.validateEmail(form.value.email) &&
-      this.validatePass(form.value.password)
+      this.validateEmail(this.user.email) &&
+      this.validatePass(this.user.password)
     ) {
       console.log('‘OK’');
-      console.log('Bienvenido');
+      this.error = false;
+      /*this.loginService.getUser().subscribe((res) => {
+        console.log(res);
+        console.log('Bienvenido ', res);
+      });*/
+      console.log('Bienvenido ' + this.user.email);
     } else {
+      this.error = true;
       // TODO: Mostrar mensaje de error
       console.error('Error en el login');
     }
-    if (form.value.rememberMe) {
+    if (this.user && this.user.rememberMe) {
       console.log('Añadimos a sesionStorage');
     }
   }

@@ -12,6 +12,11 @@
   background-color: white;
 }
 
+.error {
+  border: 2px dashed red !important;
+  transition: border-color 1s ease-in-out;
+}
+
 #loginContainer {
   display: flex;
   flex-direction: column;
@@ -25,7 +30,7 @@
   padding: 10px;
 }
 
-#loginContent {
+.loginContent {
   padding: 10px;
   padding-right: 20px;
   background-color: white;
@@ -78,8 +83,8 @@
   cursor: pointer;
 }
 
-#loginContent input[type="email"],
-#loginContent input[type="password"] {
+.loginContent input[type="email"],
+.loginContent input[type="password"] {
   font-size: 13px;
   padding: 5px;
   border: 0px;
@@ -88,8 +93,8 @@
   margin-top: 5px;
   margin-bottom: 5px;
 }
-#loginContent input[type="email"]:focus-visible,
-#loginContent input[type="password"]:focus-visible {
+.loginContent input[type="email"]:focus-visible,
+.loginContent input[type="password"]:focus-visible {
   outline: none;
 }
 
@@ -105,7 +110,7 @@ i {
   opacity: 0.5;
 }
 
-#loginContent input::placeholder {
+.loginContent input::placeholder {
   opacity: 0.5;
 }
 
