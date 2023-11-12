@@ -1,8 +1,8 @@
 Esta aplicación consta de un login
 
-Maneras de inicializar el proyecto
+Comandos para inicializar el proyecto y sus tests
 ng server
-ng test
+npm test
 
 //////////////////////////////////////////////////////////
 

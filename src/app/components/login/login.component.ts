@@ -15,7 +15,7 @@ import { User } from '../../models/user';
 export class LoginComponent implements OnInit {
   title: string = 'Login';
   username: string = 'Prueba técnica';
-  user: any;
+  user: any = new User();
   mobile: boolean = false;
   rememberMe: boolean = false;
   error: boolean = false;
@@ -25,15 +25,13 @@ export class LoginComponent implements OnInit {
     private formsModule: FormsModule
   ) {}
 
-  ngOnInit() {
-    this.user = new User();
-  }
+  ngOnInit() {}
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any): void {
     this.mobile = window.innerWidth <= 960;
   }
-
+  // Cambiamos el valor del checkbox rememberMe
   changeRememberMe() {
     this.rememberMe = !this.rememberMe;
     console.log('Remember me: ', this.rememberMe);
@@ -67,11 +65,13 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  // Validamos que el email tenga un formato correcto
   validateEmail(email: string) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
   }
 
+  // Validamos que la contraseña tenga un minimo de longitud
   validatePass(password: string) {
     if (password.length < 5) {
       return false;
