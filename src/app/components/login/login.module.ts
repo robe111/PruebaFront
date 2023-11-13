@@ -1,8 +1,4 @@
-import {
-  NgModule,
-  CUSTOM_ELEMENTS_SCHEMA,
-  NO_ERRORS_SCHEMA,
-} from '@angular/core';
+import { NgModule } from '@angular/core';
 
 import { LoginComponent } from './login.component';
 
@@ -10,8 +6,5 @@ import { LoginComponent } from './login.component';
   declarations: [],
   imports: [LoginComponent],
   providers: [],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
 })
 export class LoginModule {}
-
-module.exports = LoginComponent;

@@ -20,10 +20,7 @@ export class LoginComponent implements OnInit {
   rememberMe: boolean = false;
   error: boolean = false;
 
-  constructor(
-    public loginService: LoginService,
-    private formsModule: FormsModule
-  ) {}
+  constructor(public loginService: LoginService) {}
 
   ngOnInit() {}
 

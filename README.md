@@ -1,10 +1,17 @@
-Esta aplicación consta de un login
+<h1 align="center">Prueba técnica - Roberto Pérez Somavilla</h1>
 
-Comandos para inicializar el proyecto y sus tests
-ng server
-npm test
+<p>Esta aplicación consta de una simulación de login </p>
+Tecnologias utilizadas: typescript (Angular 17)
 
-//////////////////////////////////////////////////////////
+<p>Desarrollada con visual studio code</p>
+<p>Control del versiones con sourcetree (captura de los commits adjuntada)</p>
+
+<span>Comandos para inicializar el proyecto y sus tests:</span>
+
+<ul>
+   <li>ng server</li>
+   <li>npm test</li>
+</ul>
 
 # Prueba Front
 
