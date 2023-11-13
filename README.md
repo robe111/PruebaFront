@@ -9,8 +9,9 @@ Tecnologias utilizadas: typescript (Angular 17)
 <span>Comandos para inicializar el proyecto y sus tests:</span>
 
 <ul>
-   <li>ng server</li>
-   <li>npm test</li>
+   <li>npm i : Para crear los node_modules del proyecto</li>
+   <li>ng server : Para inicializar el proyecto (http://localhost:4200)</li>
+   <li>npm test : Para lanzar las pruebas</li>
 </ul>
 
 # Prueba Front
